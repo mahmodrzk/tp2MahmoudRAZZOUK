@@ -28,4 +28,5 @@ public class Bean {
         }
         return l;
     }
+    
 }
