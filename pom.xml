@@ -1,41 +1,42 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>ma.emsi</groupId>
-    <artifactId>Tp2MahmoudRAZZOUK</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
-    <name>Tp2MahmoudRAZZOUK-1.0-SNAPSHOT</name>
-    
+    <modelVersion>4.0.0</modelVersion> <!-- Version du modèle Maven -->
+
+    <groupId>ma.emsi</groupId> <!-- Identifiant du groupe de l'application -->
+    <artifactId>Tp2MahmoudRAZZOUK</artifactId> <!-- Identifiant de l'artefact (nom de l'application) -->
+    <version>1.0-SNAPSHOT</version> <!-- Version de l'application -->
+    <packaging>war</packaging> <!-- Type de packaging de l'application (WAR pour une application web) -->
+    <name>Tp2MahmoudRAZZOUK-1.0-SNAPSHOT</name> <!-- Nom de l'application -->
+
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jakartaee>10.0.0</jakartaee>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- Encodage des fichiers sources -->
+        <jakartaee>10.0.0</jakartaee> <!-- Version de Jakarta EE utilisée -->
     </properties>
-    
+
     <dependencies>
         <dependency>
-            <groupId>jakarta.platform</groupId>
-            <artifactId>jakarta.jakartaee-api</artifactId>
-            <version>${jakartaee}</version>
-            <scope>provided</scope>
+            <groupId>jakarta.platform</groupId> <!-- Groupe de dépendance -->
+            <artifactId>jakarta.jakartaee-api</artifactId> <!-- Artefact de dépendance (API Jakarta EE) -->
+            <version>${jakartaee}</version> <!-- Version de l'API Jakarta EE spécifiée dans les propriétés -->
+            <scope>provided</scope> <!-- Portée de la dépendance (fournie par le conteneur) -->
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <groupId>org.apache.maven.plugins</groupId> <!-- Groupe du plugin Maven -->
+                <artifactId>maven-compiler-plugin</artifactId> <!-- Artefact du plugin de compilation Maven -->
+                <version>3.11.0</version> <!-- Version du plugin de compilation -->
                 <configuration>
-                    <source>17</source>
-                    <target>17</target>
+                    <source>17</source> <!-- Version source de la compilation -->
+                    <target>17</target> <!-- Version cible de la compilation -->
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.4.0</version>
+                <groupId>org.apache.maven.plugins</groupId> <!-- Groupe du plugin Maven -->
+                <artifactId>maven-war-plugin</artifactId> <!-- Artefact du plugin de création de WAR Maven -->
+                <version>3.4.0</version> <!-- Version du plugin de création de WAR -->
             </plugin>
         </plugins>
     </build>

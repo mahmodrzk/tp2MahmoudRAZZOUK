@@ -1,19 +1,20 @@
-<?xml version='1.0' encoding='UTF-8' ?>
+<?xml version='1.0' encoding='UTF-8' ?> <!-- Déclaration XML -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://xmlns.jcp.org/jsf/html"> 
 
     <h:head>
-        <title>Application&gt;formulaire_3</title>
+        <title>Application&gt;formulaire_3</title> <!-- Titre de la page -->
     </h:head>
     <h:body>
 
-     <h1>Applicationformulaire_3</h1>
+        <h1>Applicationformulaire_3</h1> <!-- Titre principal de la page -->
+        
+        <h:form> <!-- Balise de formulaire JSF -->
+            <h:outputLabel value="Entrez un nombre" for="nombre"/> <!-- Étiquette pour le champ de saisie 'nombre' -->
+            <h:inputText id="nombre" value="#{bean.nombre}"/> <!-- Champ de saisie lié à 'bean.nombre' -->
+            <h:commandButton value="Valider" action="#{bean.afficher()}"/> <!-- Bouton de validation qui appelle la méthode 'afficher' de 'bean' -->
+        </h:form>
 
-     <h:form>
-        <h:outputLabel value="Entrez un nombre" for="nombre"/>
-        <h:inputText id="nombre" value="#{bean.nombre}"/>
-        <h:commandButton value="Valider" action="#{bean.afficher()}"/>
-      </h:form>
     </h:body>
 </html>
