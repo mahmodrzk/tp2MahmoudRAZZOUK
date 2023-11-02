@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="jakarta.faces.core">
+      xmlns:f="jakarta.faces.core"> <!-- Assurez-vous que la déclaration de l'espace de noms soit correcte -->
 
     <h:head>
         <title>Application&gt;formulaire_4</title>
@@ -10,6 +10,11 @@
     <h:body>
 
         <h1>Applicationformulaire_4</h1>
+
+        <!-- Section de métadonnées pour extraire le paramètre "nb" de l'URL et l'assigner à "bean2.nombre" -->
+        <f:metadata>
+            <f:viewParam name="nb" value="#{bean2.nombre}"/>
+        </f:metadata>
 
         <h:form>
             <!-- Étiquette de sortie pour le champ de saisie -->
@@ -20,9 +25,5 @@
             <h:commandButton value="Valider" action="#{bean2.afficher()}"/>
         </h:form>
 
-        <!-- Section de métadonnées pour extraire le paramètre "nb" de l'URL et l'assigner à "bean2.nombre" -->
-        <f:metadata>
-            <f:viewParam name="nb" value="#{bean2.nombre}"/>
-        </f:metadata>
     </h:body>
 </html>
