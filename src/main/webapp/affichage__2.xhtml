@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="jakarta.faces.html">
+
+    <body>
+
+        <ui:composition template="./WEB-INF/templates/template_defaut.xhtml">
+
+            <ui:define name="top">
+                TP PRG > Exercice 2
+            </ui:define>
+
+            <ui:define name="content">
+                <h1>Application&gt;affichage__2</h1> <!-- Titre principal de la page -->
+                Les nombres : <br/>
+
+                <!-- Utilisation de ui:repeat pour afficher une liste de nombres -->
+                <ui:repeat value="#{bean.nombresSuivants}" var="n" varStatus="status">
+                    #{n + 1}<!-- Affiche le nombre actuel, augmenté de 1 -->
+                    #{! status.last ? ', ' : ''}<!-- Ajoute une virgule si ce n'est pas le dernier élément de la liste -->
+                </ui:repeat>
+                <br/>
+
+                <h:link outcome="formulaire__2" value="Saisir un autre nombre"/> <!-- Lien vers une autre page (formulaire__2) -->
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
